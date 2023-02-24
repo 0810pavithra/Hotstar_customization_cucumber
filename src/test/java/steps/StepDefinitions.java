@@ -62,28 +62,29 @@ public class StepDefinitions  {
         homePage.getMenu().click();
         Thread.sleep(2000);
         homePage.getChannels().click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
     }
     @Then("Then user can selected the Channels.")
     public void then_user_can_selected_the_channels()throws InterruptedException  {
         homePage.getSearchChannels().click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
     }
 
 
     //testcase3
-    @When("The user clicked the Language list should be displayed.")
-    public void the_user_clicked_the_language_list_should_be_displayed() throws InterruptedException {
+    @When("The user clicked the Languages list should be displayed.")
+    public void the_user_clicked_the_languages_list_should_be_displayed()throws InterruptedException  {
         homePage.getMenu().click();
         Thread.sleep(2000);
         homePage.getLanguages().click();
         Thread.sleep(2000);
     }
-    @Then("Then user can selected the Language.")
-    public void then_user_can_selected_the_language() throws InterruptedException {
+    @Then("Then user can selected the Languages.")
+    public void then_user_can_selected_the_languages() throws InterruptedException {
         homePage.getSearchLanguage().click();
         Thread.sleep(2000);
     }
+
 
 
     //testcase4
@@ -141,7 +142,7 @@ public class StepDefinitions  {
     @Then("Get back to the home page.")
     public void get_back_to_the_home_page() throws InterruptedException {
         homePage.getReturnHome().click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
     //scenario Outline
     @When("The user enter  the search as {string} .")

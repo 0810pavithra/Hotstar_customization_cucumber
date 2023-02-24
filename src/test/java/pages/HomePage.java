@@ -44,7 +44,7 @@ public class HomePage {
     }
 
     //testcase3
-    @FindBy(linkText = ("StarPlus"))
+    @FindBy(linkText = "Languages")
     WebElement Languages;
     public WebElement getLanguages() {
         return Languages;
