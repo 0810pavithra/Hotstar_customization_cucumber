@@ -20,10 +20,10 @@ Feature: Search for Hotstar feature.
     When The user clicked the  Channels should be displayed.
     Then Then user can selected the Channels.
 
-  Scenario: verify that user able to access the Language successfully.
+  Scenario: verify that user able to access the Languages successfully.
     Given The user need to clicked the menu list,categories should be visible.
-    When The user clicked the Language list should be displayed.
-    Then Then user can selected the Language.
+    When The user clicked the Languages list should be displayed.
+    Then Then user can selected the Languages.
 
   Scenario: verify that user able to access the Genres successfully.
     Given The user need to clicked the menu list,categories should be visible.
