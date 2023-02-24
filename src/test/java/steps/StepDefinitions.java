@@ -135,7 +135,7 @@ public class StepDefinitions  {
         Thread.sleep(2000);
         String text = homePage.getSearchKidsResult().getText();
         Assert.assertEquals(text,"princess");
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
     }
 
@@ -147,7 +147,7 @@ public class StepDefinitions  {
     //scenario Outline
     @When("The user enter  the search as {string} .")
     public void the_user_enter_the_search_as(String srg0) throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         WebElement b = homePage. getSearchField();
         b.sendKeys(srg0);
         b.sendKeys(Keys.ENTER);
