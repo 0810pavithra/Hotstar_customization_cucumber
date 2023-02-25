@@ -1,6 +1,5 @@
 Feature: Search for Hotstar feature.
 
-
   Scenario Outline: Verify that the user can able to search
     Given The user navigates to the home page.
     When The user enter  the search as "<searchfields>" .
@@ -9,7 +8,7 @@ Feature: Search for Hotstar feature.
     |searchfields|
     |TV          |
     |Sports      |
-
+  @smoke
   Scenario: Verify that the user can able to search a movies
     Given The user navigates to the home page.
     When The user enter  the movies name.
@@ -35,6 +34,15 @@ Feature: Search for Hotstar feature.
     When The user enter  the kids movies name.
     And  The kids movies result should be display.
     Then Get back to the home page.
+
+
+  Scenario: verify that user able to Login with empty credentials.
+    Given The user navigates to the home page.
+    When The user need to clicked login button.
+    Then The user pressed the enter key with empty string
+
+
+
 
 
 

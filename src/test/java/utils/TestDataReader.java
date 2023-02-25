@@ -15,7 +15,7 @@ public class TestDataReader {
 
     public static void main(String[] args) {
         init();
-
+        System.out.println(data);
     }
 
     private static void init() {

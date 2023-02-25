@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,7 +27,7 @@ public class HomePage {
     public WebElement getSearchResult() {
         return searchResult;
     }
-//testcase2
+    //testcase2
     @FindBy(xpath = "//div[@id='btn-hamburger']")
      WebElement menu;
     public WebElement getMenu() {
@@ -42,7 +43,6 @@ public class HomePage {
     public WebElement getSearchChannels() {
         return searchChannels;
     }
-
     //testcase3
     @FindBy(linkText = "Languages")
     WebElement Languages;
@@ -54,20 +54,17 @@ public class HomePage {
     public WebElement getSearchLanguage() {
         return searchLanguage;
     }
-
     //testcase4
     @FindBy(linkText = ("Genres"))
      WebElement Genres;
     public WebElement getGenres() {
         return Genres;
     }
-
     @FindBy(xpath=".//span[text()='DRAMA']")
      WebElement movies;
     public WebElement getMovies() {
         return movies;
     }
-
     //testcase5
     @FindBy(xpath = "//div[@class ='navigations']/ul/li[5]/div//a[@class ='nav-link']")
     WebElement kids;
@@ -84,10 +81,22 @@ public class HomePage {
     public WebElement getSearchKidsResult() {
         return searchKidsResult;
     }
-
     @FindBy(xpath = "//button[@type ='button']")
     WebElement returnHome;
     public WebElement getReturnHome() {
         return returnHome;
+    }
+    //testcase 6
+    @FindBy(xpath = "//div[@class='signIn']")
+    WebElement searchLogin;
+
+    public WebElement getSearchLogin() {
+        return searchLogin;
+    }
+    @FindBy(id = "phoneNo")
+    WebElement enterLogin;
+
+    public WebElement getEnterLogin() {
+        return enterLogin;
     }
 }
