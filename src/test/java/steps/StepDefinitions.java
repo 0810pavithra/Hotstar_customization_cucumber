@@ -41,10 +41,10 @@ public class StepDefinitions  {
     }
 
     @When("The user enter  the movies name.")
-    public void the_user_enter_the_movies_name() throws InterruptedException {
+    public void the_user_enter_the_movies_name()  {
         homePage. getSearchField().sendKeys(data.get("TypeValue"));
         homePage. getSearchField().sendKeys(Keys.ENTER);
-        Thread.sleep(2000);
+        WaitUtil.waitTillVisible(driver,homePage.getSearchField());
     }
     @Then("The movies result should be display")
     public void the_movies_result_should_be_display() {
@@ -59,9 +59,10 @@ public class StepDefinitions  {
         ClickUtil.click(driver, homePage.getChannels());
     }
     @Then("Then user can selected the Channels.")
-    public void then_user_can_selected_the_channels()throws InterruptedException  {
+    public void then_user_can_selected_the_channels() {
         ClickUtil.click(driver, homePage.getSearchChannels());
-        Thread.sleep(2000);
+        WaitUtil.waitTillVisible(driver,homePage.getSearchChannels());
+
     }
 
 
@@ -72,9 +73,10 @@ public class StepDefinitions  {
 
     }
     @Then("Then user can selected the Languages.")
-    public void then_user_can_selected_the_languages() throws InterruptedException {
+    public void then_user_can_selected_the_languages()  {
         ClickUtil.click(driver, homePage.getSearchLanguage());
-        Thread.sleep(2000);
+        WaitUtil.waitTillVisible(driver,homePage.getSearchLanguage());
+
     }
 
     //testcase4
@@ -90,9 +92,10 @@ public class StepDefinitions  {
         ClickUtil.click(driver, homePage.getGenres());
     }
     @Then("Then user can selected the movies.")
-    public void then_user_can_selected_the_movies()throws InterruptedException {
+    public void then_user_can_selected_the_movies(){
         ClickUtil.click(driver,homePage.getMovies());
-        Thread.sleep(2000);
+        WaitUtil.waitTillVisible(driver,homePage.getMovies());
+
     }
 
     //testcase5
@@ -117,17 +120,17 @@ public class StepDefinitions  {
     }
 
     @When("The kids movies result should be display.")
-    public void the_kids_movies_result_should_be_display() throws InterruptedException {
-        Thread.sleep(1000);
+    public void the_kids_movies_result_should_be_display() {
+
+        WaitUtil.waitTillVisible(driver,homePage.getSearchKidsResult());
         String text = homePage.getSearchKidsResult().getText();
         Assert.assertEquals(text,data.get("TypeValue"));
-        Thread.sleep(2000);
 
     }
 
     @Then("Get back to the home page.")
     public void get_back_to_the_home_page() throws InterruptedException {
-        homePage.getReturnHome().click();
+        ClickUtil.click(driver, homePage.getReturnHome());
         Thread.sleep(3000);
     }
 
@@ -139,19 +142,22 @@ public class StepDefinitions  {
 
     }
     @Then("The user pressed the enter key with empty string")
-    public void the_user_pressed_the_enter_key_with_empty_string() throws InterruptedException {
+    public void the_user_pressed_the_enter_key_with_empty_string(){
         homePage.getEnterLogin().sendKeys(Keys.ENTER);
-        Thread.sleep(1000);
+        WaitUtil.waitTillVisible(driver, homePage.getEnterLogin());
+
     }
 
 
     //scenario Outline
     @When("The user enter  the search as {string} .")
-    public void the_user_enter_the_search_as(String srg0)  throws InterruptedException {
+    public void the_user_enter_the_search_as(String srg0) {
         b = homePage. getSearchField();
         b.sendKeys(srg0);
+        WaitUtil.waitTillVisible(driver, homePage.getSearchField());
         b.sendKeys(Keys.ENTER);
-        Thread.sleep(2000);
+        WaitUtil.waitTillVisible(driver, homePage.getSearchField());
+
     }
     @Then("The result should be display.")
     public void the_result_should_be_display() {

@@ -5,13 +5,15 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+
 import utils.BrowserManager;
+
 
 public class Hooks {
     //dependency injection
-    private WebDriver driver;
+
     private BrowserManager browserManager;
+
 
     public Hooks(BrowserManager browserManager) {
         this.browserManager = browserManager;
@@ -31,7 +33,8 @@ public class Hooks {
 
     }
     @After(order = 0)
-    public void tearDown() {
+    public void tearDown() throws InterruptedException {
+        Thread.sleep(1000);
        browserManager.getDriver().quit();
     }
 }

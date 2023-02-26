@@ -8,7 +8,7 @@ Feature: Search for Hotstar feature.
     |searchfields|
     |TV          |
     |Sports      |
-
+  @smoke
   Scenario: Verify that the user can able to search a movies
     Given The user navigates to the home page.
     When The user enter  the movies name.
