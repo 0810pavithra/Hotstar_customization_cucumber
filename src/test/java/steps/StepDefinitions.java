@@ -109,10 +109,10 @@ public class StepDefinitions  {
 
     @When("The user enter  the kids movies name.")
     public void the_user_enter_the_kids_movies_name() throws InterruptedException {
-       // WebElement element;
-        //Actions action = new Actions(driver);
-        //element = homePage.getKids();
-        //action.moveToElement(element).click().perform();
+        WebElement element;
+        Actions action = new Actions(driver);
+        element = homePage.getKids();
+        action.moveToElement(element).click().perform();
         Thread.sleep(1000);
         homePage. getSearchKids().sendKeys(data.get("TypeValue"));
         homePage. getSearchKids().sendKeys(Keys.ENTER);
