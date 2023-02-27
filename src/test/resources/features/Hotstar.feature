@@ -1,4 +1,4 @@
-@smoke
+
 Feature: Search for Hotstar feature.
 
   Scenario Outline: Verify that the user can able to search
