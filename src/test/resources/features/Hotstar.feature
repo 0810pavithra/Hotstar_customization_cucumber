@@ -1,5 +1,5 @@
 Feature: Search for Hotstar feature.
-
+  @smoke
   Scenario Outline: Verify that the user can able to search
     Given The user navigates to the home page.
     When The user enter  the search as "<searchfields>" .
@@ -13,29 +13,29 @@ Feature: Search for Hotstar feature.
     Given The user navigates to the home page.
     When The user enter  the movies name.
     Then The movies result should be display
-
+  @smoke
   Scenario: verify that user able to access the Channels successfully.
     Given The user need to clicked the menu list,categories should be visible.
     When The user clicked the  Channels should be displayed.
     Then Then user can selected the Channels.
-
+  @smoke
   Scenario: verify that user able to access the Languages successfully.
     Given The user need to clicked the menu list,categories should be visible.
     When The user clicked the Languages list should be displayed.
     Then Then user can selected the Languages.
-
+  @smoke
   Scenario: verify that user able to access the Genres successfully.
     Given The user need to clicked the menu list,categories should be visible.
     When The user clicked the Genres list should be displayed.
     Then Then user can selected the movies.
-
+  @smoke
   Scenario: verify that user able to access the kids successfully.
     Given The user clicked the kids,it will move to kids section.
     When The user enter  the kids movies name.
     And  The kids movies result should be display.
     Then Get back to the home page.
 
-
+  @smoke
   Scenario: verify that user able to Login with empty credentials.
     Given The user navigates to the home page.
     When The user need to clicked login button.

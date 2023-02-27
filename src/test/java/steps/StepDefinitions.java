@@ -109,10 +109,10 @@ public class StepDefinitions  {
 
     @When("The user enter  the kids movies name.")
     public void the_user_enter_the_kids_movies_name() throws InterruptedException {
-        WebElement element;
-        Actions action = new Actions(driver);
-        element = homePage.getKids();
-        action.moveToElement(element).click().perform();
+       // WebElement element;
+        //Actions action = new Actions(driver);
+        //element = homePage.getKids();
+        //action.moveToElement(element).click().perform();
         Thread.sleep(1000);
         homePage. getSearchKids().sendKeys(data.get("TypeValue"));
         homePage. getSearchKids().sendKeys(Keys.ENTER);
@@ -131,7 +131,7 @@ public class StepDefinitions  {
     @Then("Get back to the home page.")
     public void get_back_to_the_home_page() throws InterruptedException {
         ClickUtil.click(driver, homePage.getReturnHome());
-        Thread.sleep(3000);
+        Thread.sleep(1000);
     }
 
     //testcase 6
